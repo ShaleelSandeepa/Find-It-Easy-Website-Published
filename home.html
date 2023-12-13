@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="Images/logo_circle2.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="outter">
+            <div class="top">
+                <a href="home.html" class="logo"><span class="findit">Find it </span><span class="easy">easy </span>your choice...</a>
+                <div id="justify-logo"><i class="fas fa-align-justify"></i></div>
+
+                <nav class="navbar">
+                    <ul>
+                         <li><a href="home.html">home</a></li>
+                            <div class="dropdown">
+                                <button class="dropbtn">items
+                                  <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                  <a href="cloths.html">Clothes</a>
+                                  <a href="pencilArts.html">Pencil Arts</a>
+                                  <a href="decorations.html">Decorations</a>
+                                  <a href="cakes.html">Cakes</a>
+                                </div>
+                            </div>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                        <!-- <li><a href="cart.html">cart</a></li> -->
+                        <li><a href="todolist.html">to-do list</a></li>
+                            
+                    </ul>
+                </nav>
+
+            </div>
+            
+
+        </div>
+    </div>
+
+    <div class="slider">
+        <!-- Radio Controler -->
+        <input type="radio" name="sld" id="sld1">
+        <input type="radio" name="sld" id="sld2">
+        <input type="radio" name="sld" id="sld3">
+        <input type="radio" name="sld" id="sld4">
+        <input type="radio" name="sld" id="sld5">
+
+        <!-- Slide -->
+        <div class="slides">
+            <!-- Slide 1 -->
+            <div class="slide curr">
+                <img src="https://wallpapercave.com/wp/wp2019287.jpg" alt="">
+                <div class="desc">
+                    <h2>FIND IT Easy</h2>
+                    <p>This web page is designed to promote business and provide goods and services to all of you customers.
+                         Here you can find services and products from any type of business you want. You can easily pick them
+                          up and bring them home. So come and join us. Come and see the difference.</p>
+                    <a href="about.html">View More</a>
+                </div>
+            </div>
+
+             <!-- Slide 2 -->
+             <div class="slide">
+                <img src="https://yamesandco.com/wp-content/uploads/2021/07/Untitled-design-4.png" alt="">
+                <div class="desc">
+                    <h2>Clothes</h2>
+                    <p>This makes it easy to order the clothing styles and other textile items you need. People of any age can 
+                        choose clothes at a reasonable price at any price they like. Experience the art of ordering online yourself. 
+                        This is a great opportunity for that. Take your chance now. Come and join us.</p>
+                    <a href="cloths.html">View More</a>
+                </div>
+            </div>
+
+             <!-- Slide 3 -->
+             <div class="slide">
+                <img src="https://mymodernmet.com/wp/wp-content/uploads/2018/02/best-drawing-pencils-thumbnail.jpg" alt="">
+                <div class="desc">
+                    <h2>Pencil Arts</h2>
+                    <p>This makes it easy to order the pictures and other art related items you want. Priority is given to pencil 
+                        drawings and you can order other drawings as well. You can get the service from us for a reasonable price. 
+                        Experience the art of ordering online yourself. This is a great opportunity for that. Take your chance now. 
+                        Come and join us.</p>
+                    <a href="pencilArts.html">View More</a>
+                </div>
+            </div>
+
+             <!-- Slide 4 -->
+             <div class="slide">
+                <img src="https://c0.wallpaperflare.com/preview/700/485/182/art-prints-art-botanical-art-plant-art.jpg" alt="">
+                <div class="desc">
+                    <h2>Decorations</h2>
+                    <p>It makes it easy to order the birthday decorations, wall hangings, decor items and other decor items you need. 
+                        Here you can select products for your priority under a number of categories. You can get the service from us 
+                        for a reasonable price. Experience the art of ordering online yourself. This is a great opportunity for that. 
+                        Take your chance now. Come and join us.</p>
+                    <a href="decorations.html">View More</a>
+                </div>
+            </div>
+
+             <!-- Slide 5 -->
+             <div class="slide">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8&w=1000&q=80" alt="">
+                <div class="desc">
+                    <h2>Cakes</h2>
+                    <p>It also makes it easy to order the icing cakes, birthday cakes, other cakes, short eats and other treats you want.
+                         Here you can select products for your priority under a number of categories. You can get the service from us for 
+                         a reasonable price. Experience the art of ordering online yourself. This is a great opportunity for that. 
+                         Take your chance now. Come and join us.</p>
+                    <a href="cakes.html">View More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Arrow Navigation -->
+        <a href="#" class="arrow left"><i class="fas fa-arrow-circle-left"></i></a>
+        <a href="#" class="arrow right"><i class="fas fa-arrow-circle-right"></i></a>
+        <!-- Radio navigation -->
+        <div class="rad-nav">
+            <label for="sld1" class="rad-btn active"></label>
+            <label for="sld2" class="rad-btn"></label>
+            <label for="sld3" class="rad-btn"></label>
+            <label for="sld4" class="rad-btn"></label>
+            <label for="sld5" class="rad-btn"></label>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</body>
+</html>

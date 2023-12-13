@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="shortcut icon" type="img/jpg" href="Images/logo_circle2.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+</head>
+<body>
+    <div class="top">
+      <a href="home.html" class="logo"><span class="findit">Find it </span><span class="easy">easy </span>your choice...</a>
+      <div id="justify-logo"><i class="fas fa-align-justify"></i></div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">home</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn">items
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="cloths.html">Clothes</a>
+                      <a href="pencilArts.html">Pencil Arts</a>
+                      <a href="decorations.html">Decorations</a>
+                      <a href="cakes.html">Cakes</a>
+                    </div>
+                  </div>
+                <li><a href="about.html">about</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <!-- <li><a href="cart.html">cart</a></li> -->
+                <li><a href="todolist.html">to-do list</a></li>
+                
+            </ul>
+        </nav>
+        
+</div>
+
+<div class="middle">
+
+  <div id="app">
+    <div class="content">
+      <h1>Todo List</h1>
+
+      <div v-if="!Editing">
+        <input class="input-text" type="text" v-model="todo" placeholder="Enter Your Favourit Items">
+        <input class="submit-btn" type="submit" value="ADD" @click="storeTodo">  
+      </div>
+
+      <div v-else>
+        <input class="input-text"  type="text" v-model="todo" placeholder="Enter Your Favourit Items">
+        <input class="submit-btn" type="submit" value="UPDATE" @click="updateTodo">  
+      </div>
+
+      <ol>
+        <li class="li-items" v-for="(todo, index) in todos">
+          {{todo}}    &nbsp; &nbsp; &nbsp;
+
+          <span class="e-d-icon" style="cursor: pointer;" @click="editTodo(index, todo)"><i class="fas fa-edit"></i></span> &nbsp;
+          <span class="e-d-icon" style="cursor: pointer;" @click="deleteTodo(index)"><i class="fas fa-trash-alt"></i></span> 
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+
+      data: {
+        Editing: false,
+        selectedIndex: null,
+        todo: '',
+        todos: []
+      },
+
+      methods: {
+        storeTodo() {
+          if (this.todo !=""){
+            this.todos.push(this.todo)
+            this.todo = ''
+          }
+        },
+
+        editTodo(index, todo) {
+          this.todo = todo
+          this.selectedIndex = index
+          this.Editing = true
+        },
+
+        updateTodo() {
+          this.todos.splice(this.selectedIndex, 1, this.todo)
+          this.Editing = false
+          this.todo = ''
+        },
+
+        deleteTodo(index) {
+          this.todos.splice(index, 1)
+        }
+      }
+    })
+  </script>
+
+</div>
+
+<div class="bottom">
+  <h2>Created By <span class="owner">Shaleel Sandeepa</span> | All Right Reserved</h2>
+
+</div>
+
+</body>
+</html>
